@@ -1,14 +1,19 @@
 {
-    "builds": [
-        {
-            "src": "hehe/wsgi.py",
-            "use": "@vercel/python"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "hehe/wsgi.py"
-        }
-    ]
+  "builds": [
+    {
+      "src": "hehe/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "hehe/wsgi.py"
+    }
+  ],
+  "build": {
+    "env": {
+      "VERCEL_SQLITE_VERSION": "3.36.0"
+    }
+  }
 }
