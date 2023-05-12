@@ -4,5 +4,4 @@ psycopg2-binary==2.9.5
 pytz==2020.1
 whitenoise==6.0.0
 django-avatar==7.1.1
-libsqlite3-dev
 pysqlite3
