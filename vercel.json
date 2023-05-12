@@ -1,14 +1,24 @@
- {
-    "builds": [
-        {
-            "src": "hehe/wsgi.py",
-            "use": "@vercel/python"
+{
+  "builds": [
+    {
+      "src": "hehe/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "build": {
+          "env": {
+            "LD_LIBRARY_PATH": "/usr/local/lib"
+          },
+          "packages": [
+            "sqlite3"
+          ]
         }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "hehe/wsgi.py"
-        }
-    ]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "hehe/wsgi.py"
+    }
+  ]
 }
